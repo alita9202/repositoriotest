@@ -1,29 +1,84 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taller de Aplicaciones en Internet</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller de Aplicaciones en Internet</title>
 
-    <!-- Fuente moderna -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-    <link rel="stylesheet" href="estilo.css" />
-  </head>
-  <body>
-    <header>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
       <h1>Taller de Aplicaciones en Internet</h1>
-    </header>
+      <p class="subtitle">
+        Página web interactiva desarrollada con HTML, CSS y JavaScript.
+      </p>
+      <button class="btn-principal" onclick="mostrarMensaje()">Haz clic aquí</button>
+    </div>
+  </header>
 
-    <section>
-      <p>Este es el contenido principal de la página.</p>
+  <main class="container">
+
+    <section class="card">
+      <h2>Descripción</h2>
+      <p>
+        Este es el contenido principal de la página.
+        Este es un estilo basico para mostrar cómo se pueden estructurar los elementos en una página web utilizando HTML y CSS. La página incluye un encabezado, una sección de colaboradores y un formulario de contacto.
+      </p>
     </section>
 
-    <footer>
-      <p>© 2026 - Todos los derechos reservados</p>
-    </footer>
-  </body>
+    <section class="card colaboradores-section">
+      <h2>Colaboradores</h2>
+
+      <div class="collaborators-grid">
+        <article class="collaborator">
+          <img src="imagenes/82979577.jpg" alt="Colaborador 1">
+          <h3>Franco Enrique Parisaca Machaca</h3>
+          <p>Desarrollador</p>
+        </article>
+
+        <article class="collaborator">
+          <img src="imagenes/90294036.jpg" alt="Colaborador 2">
+          <h3>Alejandra Veronica Terceros Arcani</h3>
+          <p>Desarrolladora</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Formulario de contacto</h2>
+
+      <form id="formulario" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" placeholder="Ingresa tu correo">
+        </div>
+
+        <button type="submit" class="btn-secundario">Enviar</button>
+        <p id="mensaje"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
